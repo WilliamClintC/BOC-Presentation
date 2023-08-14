@@ -10,7 +10,9 @@
 <link href="main_files/libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
   <meta name="generator" content="quarto-1.3.433">
 
-  <title>Quarto Presentations</title>
+  <meta name="author" content="William Clinton-Co">
+  <meta name="dcterms.date" content="2023-08-13">
+  <title>Final Presentation</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -327,29 +329,165 @@
     <div class="slides">
 
 <section id="title-slide" class="quarto-title-block center">
-  <h1 class="title">Quarto Presentations</h1>
-  <p class="subtitle">Create beautiful interactive slide decks with Reveal.js</p>
+  <h1 class="title">Final Presentation</h1>
 
 <div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+William Clinton-Co 
+</div>
+</div>
 </div>
 
+  <p class="date">2023-08-13</p>
 </section>
-<section id="hello-there" class="slide level2">
-<h2>Hello, There</h2>
-<p>This presentation will show you examples of what you can do with Quarto and <a href="https://revealjs.com">Reveal.js</a>, including:</p>
-<ul>
-<li>Presenting code and LaTeX equations</li>
-<li>Including computations in slide output</li>
-<li>Image, video, and iframe backgrounds</li>
-<li>Fancy transitions and animations</li>
-<li>Printing to PDF</li>
-</ul>
-<p>…and much more</p>
+<section id="choosing-variables" class="slide level2">
+<h2>Choosing Variables</h2>
 
-<img src="images/UBC_logo.png" class="slide-logo r-stretch"><div class="footer footer-default">
+<img data-src="images/Screenshot%202023-07-23%20225228.png" width="505" class="r-stretch"></section>
+<section id="choosing-variables-1" class="slide level2">
+<h2>Choosing Variables</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/Screenshot%202023-07-23%20225152.png" data-layout-ncol="2" width="475"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/Screenshot%202023-07-23%20225209.png" width="835"></p>
+</div>
+</div>
+</section>
+<section id="stationary" class="slide level2">
+<h2>Stationary?</h2>
+<h4 id="not-stationary">Not Stationary</h4>
+<p>CPI, GDP, Consumption, Investment, wages</p>
+<h4 id="uncertain">Uncertain</h4>
+<p>Unemployment, Net Exports</p>
+<h4 id="stationary-1">Stationary</h4>
+<p>Overnight Rate</p>
+</section>
+<section id="data" class="slide level2">
+<h2>Data</h2>
+<h4 id="q1-2013--q1-2023">Q1 2013- Q1 2023</h4>
+
+<img data-src="images/output.png" class="r-stretch"></section>
+<section id="granger-causality" class="slide level2">
+<h2>Granger Causality</h2>
+
+<img data-src="images/Screenshot%202023-08-12%20194748.png" class="r-stretch"><h4 id="significance-at-5">Significance at 5%</h4>
+</section>
+<section id="cointegration-test" class="slide level2">
+<h2>Cointegration test</h2>
+<h4 id="noisy-at-2020">Noisy at 2020</h4>
+
+<img data-src="images/cointegration.png" class="r-stretch"></section>
+<section id="augmented-dickey-fuller-test" class="slide level2">
+<h2>Augmented Dickey-Fuller Test</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Initial</p>
+<p><img data-src="images/dicky%20fuller-02.png"></p>
+</div><div class="column" style="width:50%;">
+<p>First difference (matches cointegration test)<img data-src="images/dickey%20fuller%202-02.png"></p>
+</div>
+</div>
+</section>
+<section id="second-difference" class="slide level2">
+<h2>Second Difference</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p><img data-src="images/adf1.png"></p>
+</div><div class="column" style="width:50%;">
+<p><img data-src="images/adf2.png"></p>
+</div>
+</div>
+</section>
+<section id="lag-selection" class="slide level2">
+<h2>Lag Selection</h2>
+
+<img data-src="images/Screenshot%202023-08-12%20204219.png" class="r-stretch"><h4 id="disregard-extremes">disregard extremes</h4>
+</section>
+<section id="model-implementation" class="slide level2">
+<h2>Model Implementation</h2>
+<p>where P is a coefficient matrix</p>
+
+<img data-src="images/Screenshot%202023-08-13%20145553.png" class="r-stretch"></section>
+<section id="model-results" class="slide level2">
+<h2>Model Results</h2>
+
+<img data-src="images/model1.png" class="r-stretch"></section>
+<section id="model-implementation-1" class="slide level2">
+<h2>Model Implementation</h2>
+
+<img data-src="images/Screenshot%202023-08-12%20204833.png" class="r-stretch"></section>
+<section id="serial-correlation-of-residuals" class="slide level2">
+<h2>Serial Correlation of Residuals</h2>
+<h4 id="durbin-watson-statistic"><strong>Durbin Watson Statistic</strong></h4>
+
+<img data-src="images/dws.png" class="r-stretch"><p>all values are close to 2 – insignificant</p>
+</section>
+<section id="cpi-forecast" class="slide level2">
+<h2>CPI Forecast</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="mean">Mean</h3>
+<p><img data-src="images/CPI%20forecast.png"></p>
+</div><div class="column" style="width:50%;">
+<h3 id="range">Range</h3>
+<p><img data-src="images/cpi%20forecast2.png"></p>
+</div>
+</div>
+</section>
+<section id="evaluation" class="slide level2">
+<h2>Evaluation</h2>
+
+<img data-src="images/Error.png" width="558" class="r-stretch"></section>
+<section id="recommendation" class="slide level2">
+<h2>Recommendation</h2>
+<h4 id="keep-interest-rates-stable">Keep interest rates stable</h4>
+<div class="columns">
+<div class="column" style="width:50%;">
+<p>Low mean forecast</p>
+<p><img data-src="images/CPI%20forecast.png"></p>
+</div><div class="column" style="width:50%;">
+<p>High variance</p>
+<p><img data-src="images/cpi%20forecast2.png"></p>
+</div>
+</div>
+</section>
+<section>
+<section id="creative-portion" class="title-slide slide level1 center">
+<h1>Creative Portion</h1>
+
+</section>
+<section id="correlation-matrix-1q" class="slide level2">
+<h2>Correlation Matrix 1Q</h2>
+
+<img data-src="images/1Q%20CPI.png" class="r-stretch"></section>
+<section id="correlation-matrix-1-year" class="slide level2">
+<h2>Correlation Matrix 1 Year <img data-src="images/1%20year%20cpi.png"></h2>
+</section>
+<section id="correlation-matrix-2-years" class="slide level2">
+<h2>Correlation Matrix 2 Years</h2>
+
+<img data-src="images/2%20years%20cpi.png" class="r-stretch"></section>
+<section id="map" class="slide level2">
+<h2>Map</h2>
+<p>Lighter colors are more connected.</p>
+
+<img data-src="images/Map.png" class="r-stretch"></section>
+<section id="centrality-values" class="slide level2">
+<h2>Centrality Values</h2>
+
+<img data-src="images/centrality%20values.png" class="r-stretch"></section>
+<section id="actual-vs-predicted" class="slide level2">
+<h2>Actual VS Predicted</h2>
+<p>Food and clothing drove inflation a year ago but not anymore.</p>
+<p><img data-src="images/output-01.png"></p>
+<p>Inflation sector targeting? Low inflation prediction</p>
+<p><img src="images/UBC_logo.png" class="slide-logo"></p>
+<div class="footer footer-default">
 <p>&lt;&gt;</p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
