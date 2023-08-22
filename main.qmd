@@ -1,6 +1,6 @@
 ---
 title: "Final Presentation"
-#subtitle: "Bank of Canada Governors Challenge"
+subtitle: "Bank of Canada Governors Challenge"
 author: "William Clinton-Co"
 #institute: "UBC"
 date: today
@@ -16,7 +16,20 @@ format:
     footer: <>
 resources:
   - demo.pdf
+bibliography: references.bib
 ---
+
+## Contents
+
+1.  VAR Model
+
+2.  Creative Portion
+
+    1.  Centrality Map
+
+    2.  Price Dispersion
+
+# VAR Model
 
 ## Choosing Variables
 
@@ -38,11 +51,11 @@ resources:
 
 #### Not Stationary
 
-CPI, GDP, Consumption, Investment, wages
+CPI, GDP, Consumption, Wages
 
 #### Uncertain
 
-Unemployment, Net Exports
+Unemployment, Net Exports (Balance of Payments),Investment
 
 #### Stationary
 
@@ -54,17 +67,23 @@ Overnight Rate
 
 ![](images/output.png)
 
-## Granger Causality
-
-![](images/Screenshot%202023-08-12%20194748.png)
+## Granger Causality![](images/Screenshot%202023-08-18%20213613-01.png)
 
 #### Significance at 5%
+
+::: notes
+granger causality of gdp_y affecting CPI_x , cpi_y to cpi_x , unem_y to Cpi_x
+:::
 
 ## Cointegration test
 
 #### Noisy at 2020
 
 ![](images/cointegration.png)
+
+::: notes
+we check for cointegration. our suspicions were correct balance of payments- stationary, rate- stationary
+:::
 
 ## Augmented Dickey-Fuller Test
 
@@ -80,6 +99,10 @@ First difference (matches cointegration test)![](images/dickey%20fuller%202-02.p
 :::
 :::
 
+::: notes
+inline with out cointegration results and initial suspicions
+:::
+
 ## Second Difference
 
 ::: columns
@@ -92,6 +115,10 @@ First difference (matches cointegration test)![](images/dickey%20fuller%202-02.p
 :::
 :::
 
+::: notes
+All is stationary
+:::
+
 ## Lag Selection
 
 ![](images/Screenshot%202023-08-12%20204219.png)
@@ -102,7 +129,7 @@ First difference (matches cointegration test)![](images/dickey%20fuller%202-02.p
 
 where P is a coefficient matrix
 
-![](images/Screenshot 2023-08-13 145553.png)
+![](images/Screenshot%202023-08-13%20145553.png)
 
 ## Model Results
 
@@ -127,18 +154,24 @@ all values are close to 2 -- insignificant
 ### Mean
 
 ![](images/CPI%20forecast.png)
+
+Low mean forecast
 :::
 
 ::: {.column width="50%"}
 ### Range
 
 ![](images/cpi%20forecast2.png)
+
+Big spread
 :::
 :::
 
 ## Evaluation
 
 ![](images/Error.png){width="558"}
+
+accuracy is acceptable
 
 ## Recommendation
 
@@ -158,13 +191,21 @@ High variance
 :::
 :::
 
-# Creative Portion
+# Centrality Map
+
+## CPI Data
+
+![](images/CPI%20sectors.png)
 
 ## Correlation Matrix 1Q
 
 ![](images/1Q%20CPI.png)
 
-## Correlation Matrix 1 Year ![](images/1%20year%20cpi.png)
+::: notes
+correlation exist in 1q but not in longer times
+:::
+
+## Correlation Matrix 1 Year s![](images/1%20year%20cpi.png)
 
 ## Correlation Matrix 2 Years
 
@@ -176,14 +217,146 @@ Lighter colors are more connected.
 
 ![](images/Map.png)
 
+::: notes
+if correlation is greater than 0.5 they are connected. the most negative correlated is health personal care and sins
+:::
+
 ## Centrality Values
 
 ![](images/centrality%20values.png)
 
+## Equation
+
+![](images/Screenshot 2023-08-20 063133.png)
+
+where $P$ and $X$ are coefficient matrices.
+
 ## Actual VS Predicted
 
-Food and clothing drove inflation a year ago but not anymore.
+Food and clothing drove inflation last year![](images/output-04.png)
 
-![](images/output-01.png)
+## Conclusion
 
-Inflation sector targeting? Low inflation prediction
+Low inflation prediction, Inflation sector targeting?
+
+![](images/output-05.png)
+
+# Price Dispersion
+
+## Paper
+
+![](images/klaus%20asam.png)
+
+## Theory
+
+![](images/dispersion.png)
+
+Product 1 is optimal inflation, Product 3 is sub-optimal inflation
+
+::: notes
+unexpected inflation
+:::
+
+## Claim
+
+![](images/dispersion.png)
+
+if u (residual) is high then inflation is sub-optimal.
+
+## Data
+
+UK, Argentina, US, Canadian Data
+
+![](images/output-06.png)
+
+## Equation
+
+### $$P_{jzt}/P_{zt}=\beta_0+\beta_1\cdot t\cdot\pi_{jzt}+u$$
+
+where j is a CPI category
+
+z is overall CPI
+
+t is time (cross sections)
+
+## Relative
+
+![](images/relative.png)
+
+## Inflation
+
+![](images/inflation.png)
+
+## Regression
+
+::: columns
+::: {.column width="50%"}
+![](images/regress.png)
+:::
+
+::: {.column width="50%"}
+![](images/regre2.png)
+:::
+:::
+
+## Regression
+
+::: columns
+::: {.column width="50%"}
+![](images/re3.png)
+:::
+
+::: {.column width="50%"}
+![](images/re4.png)
+:::
+:::
+
+## Regression
+
+::: columns
+::: {.column width="50%"}
+![](images/output-02.png)
+:::
+
+::: {.column width="50%"}
+![](images/1.png)
+:::
+:::
+
+## Residuals
+
+![](images/Residuals.png)
+
+::: notes
+most are low aside from household and semi durable
+:::
+
+## Aggregate Residuals Over Time
+
+![](images/1-01.png)
+
+Close to optimal inflation
+
+## Aggregate Residuals Over Time
+
+![](images/2.png)
+
+Keep interest rates stable
+
+## Summary
+
+1.  VAR Model -- *Keep rates stable*
+
+2.  Centrality Map -- *Low inflation is predicted*
+
+3.  Price Dispersion -- *close to optimal inflation*
+
+### Keep interest rates stable
+
+# Keep interest rates stable
+
+## References
+
+::: notes
+@adam @solimine @bankofcanada @nakamura2018 @sheremirov2020 @alvarez2022
+:::
