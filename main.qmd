@@ -227,7 +227,7 @@ if correlation is greater than 0.5 they are connected. the most negative correla
 
 ## Equation
 
-![](images/Screenshot 2023-08-20 063133.png)
+![](images/Screenshot%202023-08-20%20063133.png)
 
 where $P$ and $X$ are coefficient matrices.
 
