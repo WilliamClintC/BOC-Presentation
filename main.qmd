@@ -1,5 +1,9 @@
 ---
+<<<<<<< HEAD
 title: "Progress Update"
+=======
+title: "Progress Report"
+>>>>>>> 6fad75d863343549e467770354dee6bb926c82ec
 subtitle: "Truck Stop Project"
 author: "William Clinton Co"
 #institute: "UBC"
@@ -19,6 +23,7 @@ resources:
 bibliography: references.bib
 ---
 
+<<<<<<< HEAD
 # Ideas Updates
 
 1.  What constitutes as severe accident?
@@ -82,5 +87,43 @@ need to join to 1 column how?
 ![](images/5.png)
 :::
 :::
+=======
+# Agenda
+
+1.  Improved Charts
+2.  Keyword Readings
+
+## Improved Charts
+
+![](images/output1-01.png)
+
+## Improved Charts
+
+![](images/output-01.png)
+
+## Improved Charts
+
+![](images/output2.png)
+
+## Keyword Readings
+
+![](images/Screenshot%202024-08-28%20235756.png)
+
+20/101
+
+## New Additions
+
+Unless, apply, compliance, regulate, limited,conform, reviewed, preserve, prevent
+
+## Seminars
+
+![](images/Screenshot%202024-08-29%20044440.png)
+
+## Running Code
+
+![](images/Screenshot 2024-08-29 120227.png)![](images/Screenshot 2024-08-29 120414.png)
+
+Will run pre_processing in BU server
+>>>>>>> 6fad75d863343549e467770354dee6bb926c82ec
 
 # End
