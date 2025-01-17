@@ -1,11 +1,17 @@
 ---
 <<<<<<< HEAD
+<<<<<<< HEAD
 title: "Progress Update"
 =======
 title: "Progress Report"
 >>>>>>> 6fad75d863343549e467770354dee6bb926c82ec
 subtitle: "Truck Stop Project"
 author: "William Clinton Co"
+=======
+title: "Final Presentation"
+subtitle: "Bank of Canada Governors Challenge"
+author: "William Clinton-Co"
+>>>>>>> parent of 6fad75d (gg)
 #institute: "UBC"
 date: today
 format:
@@ -23,6 +29,7 @@ resources:
 bibliography: references.bib
 ---
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 # Ideas Updates
 
@@ -89,41 +96,351 @@ need to join to 1 column how?
 :::
 =======
 # Agenda
+=======
+## Contents
+>>>>>>> parent of 6fad75d (gg)
 
-1.  Improved Charts
-2.  Keyword Readings
+1.  VAR Model
 
-## Improved Charts
+2.  Creative Portion
 
-![](images/output1-01.png)
+    1.  Centrality Map
 
-## Improved Charts
+    2.  Price Dispersion
 
-![](images/output-01.png)
+# VAR Model
 
-## Improved Charts
+## Choosing Variables
 
-![](images/output2.png)
+![](images/Screenshot%202023-07-23%20225228.png){width="505"}
 
-## Keyword Readings
+## Choosing Variables
 
-![](images/Screenshot%202024-08-28%20235756.png)
+::: columns
+::: {.column width="50%"}
+![](images/Screenshot%202023-07-23%20225152.png){layout-ncol="2" width="475"}
+:::
 
-20/101
+::: {.column width="50%"}
+![](images/Screenshot%202023-07-23%20225209.png){width="835"}
+:::
+:::
 
-## New Additions
+## Stationary?
 
-Unless, apply, compliance, regulate, limited,conform, reviewed, preserve, prevent
+#### Not Stationary
 
-## Seminars
+CPI, GDP, Consumption, Wages
 
-![](images/Screenshot%202024-08-29%20044440.png)
+#### Uncertain
 
-## Running Code
+Unemployment, Net Exports (Balance of Payments),Investment
 
-![](images/Screenshot 2024-08-29 120227.png)![](images/Screenshot 2024-08-29 120414.png)
+#### Stationary
 
+<<<<<<< HEAD
 Will run pre_processing in BU server
 >>>>>>> 6fad75d863343549e467770354dee6bb926c82ec
+=======
+Overnight Rate
+>>>>>>> parent of 6fad75d (gg)
 
-# End
+## Data
+
+#### Q1 2013- Q1 2023
+
+![](images/output.png)
+
+## Granger Causality![](images/Screenshot%202023-08-18%20213613-01.png)
+
+#### Significance at 5%
+
+::: notes
+granger causality of gdp_y affecting CPI_x , cpi_y to cpi_x , unem_y to Cpi_x
+:::
+
+## Cointegration test
+
+#### Noisy at 2020
+
+![](images/cointegration.png)
+
+::: notes
+we check for cointegration. our suspicions were correct balance of payments- stationary, rate- stationary
+:::
+
+## Augmented Dickey-Fuller Test
+
+::: columns
+::: {.column width="50%"}
+Initial
+
+![](images/dicky%20fuller-02.png)
+:::
+
+::: {.column width="50%"}
+First difference (matches cointegration test)![](images/dickey%20fuller%202-02.png)
+:::
+:::
+
+::: notes
+inline with out cointegration results and initial suspicions
+:::
+
+## Second Difference
+
+::: columns
+::: {.column width="50%"}
+![](images/adf1.png)
+:::
+
+::: {.column width="50%"}
+![](images/adf2.png)
+:::
+:::
+
+::: notes
+All is stationary
+:::
+
+## Lag Selection
+
+![](images/Screenshot%202023-08-12%20204219.png)
+
+#### disregard extremes
+
+## Model Implementation
+
+where P is a coefficient matrix
+
+![](images/Screenshot%202023-08-13%20145553.png)
+
+## Model Results
+
+![](images/model1.png)
+
+## Model Implementation
+
+![](images/Screenshot%202023-08-12%20204833.png)
+
+## Serial Correlation of Residuals
+
+#### **Durbin Watson Statistic**
+
+![](images/dws.png)
+
+all values are close to 2 -- insignificant
+
+## CPI Forecast
+
+::: columns
+::: {.column width="50%"}
+### Mean
+
+![](images/CPI%20forecast.png)
+
+Low mean forecast
+:::
+
+::: {.column width="50%"}
+### Range
+
+![](images/cpi%20forecast2.png)
+
+Big spread
+:::
+:::
+
+## Evaluation
+
+![](images/Error.png){width="558"}
+
+accuracy is acceptable
+
+## Recommendation
+
+#### Keep interest rates stable
+
+::: columns
+::: {.column width="50%"}
+Low mean forecast
+
+![](images/CPI%20forecast.png)
+:::
+
+::: {.column width="50%"}
+High variance
+
+![](images/cpi%20forecast2.png)
+:::
+:::
+
+# Centrality Map
+
+## CPI Data
+
+![](images/CPI%20sectors.png)
+
+## Correlation Matrix 1Q
+
+![](images/1Q%20CPI.png)
+
+::: notes
+correlation exist in 1q but not in longer times
+:::
+
+## Correlation Matrix 1 Year s![](images/1%20year%20cpi.png)
+
+## Correlation Matrix 2 Years
+
+![](images/2%20years%20cpi.png)
+
+## Map
+
+Lighter colors are more connected.
+
+![](images/Map.png)
+
+::: notes
+if correlation is greater than 0.5 they are connected. the most negative correlated is health personal care and sins
+:::
+
+## Centrality Values
+
+![](images/centrality%20values.png)
+
+## Equation
+
+![](images/Screenshot%202023-08-20%20063133.png)
+
+where $P$ and $X$ are coefficient matrices.
+
+## Actual VS Predicted
+
+Food and clothing drove inflation last year![](images/output-04.png)
+
+## Conclusion
+
+Low inflation prediction, Inflation sector targeting?
+
+![](images/output-05.png)
+
+# Price Dispersion
+
+## Paper
+
+![](images/klaus%20asam.png)
+
+## Theory
+
+![](images/dispersion.png)
+
+Product 1 is optimal inflation, Product 3 is sub-optimal inflation
+
+::: notes
+unexpected inflation
+:::
+
+## Claim
+
+![](images/dispersion.png)
+
+if u (residual) is high then inflation is sub-optimal.
+
+## Data
+
+UK, Argentina, US, Canadian Data
+
+![](images/output-06.png)
+
+## Equation
+
+### $$P_{jzt}/P_{zt}=\beta_0+\beta_1\cdot t\cdot\pi_{jzt}+u$$
+
+where j is a CPI category
+
+z is overall CPI
+
+t is time (cross sections)
+
+## Relative
+
+![](images/relative.png)
+
+## Inflation
+
+![](images/inflation.png)
+
+## Regression
+
+::: columns
+::: {.column width="50%"}
+![](images/regress.png)
+:::
+
+::: {.column width="50%"}
+![](images/regre2.png)
+:::
+:::
+
+## Regression
+
+::: columns
+::: {.column width="50%"}
+![](images/re3.png)
+:::
+
+::: {.column width="50%"}
+![](images/re4.png)
+:::
+:::
+
+## Regression
+
+::: columns
+::: {.column width="50%"}
+![](images/output-02.png)
+:::
+
+::: {.column width="50%"}
+![](images/1.png)
+:::
+:::
+
+## Residuals
+
+![](images/Residuals.png)
+
+::: notes
+most are low aside from household and semi durable
+:::
+
+## Aggregate Residuals Over Time
+
+![](images/1-01.png)
+
+Close to optimal inflation
+
+## Aggregate Residuals Over Time
+
+![](images/2.png)
+
+Keep interest rates stable
+
+## Summary
+
+1.  VAR Model -- *Keep rates stable*
+
+2.  Centrality Map -- *Low inflation is predicted*
+
+3.  Price Dispersion -- *close to optimal inflation*
+
+### Keep interest rates stable
+
+# Keep interest rates stable
+
+## References
+
+::: notes
+@adam @solimine @bankofcanada @nakamura2018 @sheremirov2020 @alvarez2022
+:::
